@@ -1,26 +1,58 @@
-<script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
-</script>
+<script setup lang="ts"></script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+  <div class="search">
+    <p class="search__logo">Logo</p>
+    <h1 class="search__header">FIND YOUR MOVIE</h1>
+    <input class="search__input" type="text" name="search">
+    <button class="search__btn">SEARCH</button>
+    <div class="search__search-by">
+      <span class="search__text">SEARCH BY</span>
+      <div class="search__radio-group">
+        <label for="search__title">
+          <input type="radio" id="search-by-title" name="search-by">
+          TITLE
+        </label>
+        <label for="search__genre">
+          <input type="radio" id="search-by-genre" name="search-by">
+          GENRE
+        </label>
+      </div>
     </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
+  </div>
 </template>
 
-<style scoped>
-
-.results, .results-body {
+<style scoped lang="scss">
+.search {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template: 1fr 1fr 1fr 1fr / 1fr 1fr 1fr;
+  column-gap: 1em;
+  row-gap: 1em;
+
+  & .search__logo, & .search__header {
+    grid-column: 1 / 4;
+  }
+
+  & .search__input {
+    grid-column: 1 / 3;
+  }
+
+  & .search__btn {
+
+  }
+
+  & .search__search-by {
+    display: grid;
+    align-items: center;
+    grid-auto-flow: column;
+
+    & .search__text {
+
+    }
+
+    & .search__radio-group {
+      display: inline-block;
+    }
+  }
 }
 </style>
