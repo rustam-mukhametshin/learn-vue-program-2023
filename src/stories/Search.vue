@@ -9,7 +9,7 @@
       <div class="search__search-by">
         <span class="search__text">SEARCH BY</span>
         <div class="search__radio-group">
-          <input type="radio" id="search-by-title" name="search-by">
+          <input type="radio" id="search-by-title" name="search-by" checked>
           <label for="search-by-title">TITLE</label>
           <input type="radio" id="search-by-genre" name="search-by">
           <label for="search-by-genre">GENRE</label>
