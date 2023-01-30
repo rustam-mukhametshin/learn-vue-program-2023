@@ -1,4 +1,8 @@
 @import './base.css';
+:root {
+  --red: #f65261;
+  --bg-clr: #00000066;
+}
 
 #app {
   max-width: 1280px;
