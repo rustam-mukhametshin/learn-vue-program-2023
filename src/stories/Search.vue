@@ -4,7 +4,7 @@
     <div class="search__body">
       <div class="search__logo"><img src="../assets/Netflix_Logo_PMS.png" alt="netflix"></div>
       <h1 class="search__header">FIND YOUR MOVIE</h1>
-      <input class="search__input" type="text" name="search" placeholder="Search">
+      <input v-on:keyup.enter="doSearch" class="search__input" type="text" name="search" placeholder="Search">
       <button class="search__btn" v-on:click="doSearch">SEARCH</button>
       <div class="search__search-by">
         <span class="search__text">SEARCH BY</span>
