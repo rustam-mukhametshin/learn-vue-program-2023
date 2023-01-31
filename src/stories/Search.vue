@@ -3,16 +3,16 @@
     <div class="search__bg-image"></div>
     <div class="search__body">
       <div class="search__logo"><img src="../assets/Netflix_Logo_PMS.png" alt="netflix"></div>
-      <h1 class="search__header">FIND YOUR MOVIE</h1>
+      <h1 class="search__header">{{ uppercase('Find your movie') }}</h1>
       <InputSearch></InputSearch>
-      <button class="search__btn" v-on:click="doSearch">SEARCH</button>
+      <button class="search__btn" v-on:click="doSearch">{{ uppercase('search') }}</button>
       <div class="search__search-by">
-        <span class="search__text">SEARCH BY</span>
+        <span class="search__text">{{ uppercase('search by') }}</span>
         <div class="search__radio-group">
           <input type="radio" id="search-by-title" name="search-by" checked>
-          <label for="search-by-title">TITLE</label>
+          <label for="search-by-title">{{ uppercase('title') }}</label>
           <input type="radio" id="search-by-genre" name="search-by">
-          <label for="search-by-genre">GENRE</label>
+          <label for="search-by-genre">{{ uppercase('genre') }}</label>
         </div>
       </div>
     </div>
@@ -31,7 +31,12 @@ export default {
         console.log('search')
       }
     }
-  }
+  },
+  methods: {
+    uppercase: function (value) {
+      return value.toUpperCase();
+    }
+  },
 }
 </script>
 
@@ -69,7 +74,7 @@ export default {
     grid-column: 1 / 3;
     border: none;
     background: var(--bg-clr);
-    padding: 5px;
+    padding: 5px 10px;
   }
 
   & .search__btn {
