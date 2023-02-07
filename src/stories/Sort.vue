@@ -1,7 +1,7 @@
 <template>
   <div class="sort">
     <div class="sorting__total">
-      <p>7 movie found</p>
+      <p>{{ list.length }} movie found</p>
     </div>
     <div class="sort__sort_by">
       <span class="sort__text">{{ uppercase('sort by') }}</span>
@@ -20,7 +20,10 @@ import uppercase from "@/stories/mixins/uppercase";
 
 export default {
   name: "Sort",
-  mixins: [uppercase]
+  mixins: [uppercase],
+  props: {
+    list: Array,
+  }
 }
 </script>
 
