@@ -2,9 +2,10 @@
 import { defineComponent } from "vue";
 import Search from "@/stories/Search.vue";
 import Sort from "@/stories/Sort.vue";
+import List from "@/stories/List.vue";
 
 export default defineComponent({
-  components: { Sort, Search },
+  components: { List, Sort, Search },
 })
 </script>
 
@@ -12,6 +13,8 @@ export default defineComponent({
   <Search></Search>
 
   <Sort></Sort>
+
+  <List></List>
 </template>
 
 <style scoped lang="scss">
