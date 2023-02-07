@@ -21,6 +21,7 @@
 
 <script>
 import InputSearch from "./InputSearch.vue";
+import uppercase from "./mixins/uppercase";
 
 export default {
   name: "Search",
@@ -32,11 +33,7 @@ export default {
       }
     }
   },
-  methods: {
-    uppercase: function (value) {
-      return value.toUpperCase();
-    }
-  },
+  mixins: [uppercase]
 }
 </script>
 
